@@ -31,28 +31,3 @@ csv_file.close()
 
 
 
-"""
-data=[]
-
-allrows=soup.find_all("tr")
-for row in allrows:
-    row_list=row.find_all("td")
-    datarow=[]
-    for cell in row_list:
-        datarow.append(cell.text.replace("\n",""))
-    data.append(datarow)
-data=data[2:]
-
-header_list=[]
-col_headers=soup.find_all("th")
-for col in col_headers:
-    header_list.append(col.text)
-
-df=pd.DataFrame(data)
-df.columns=header_list
-print(df.head(2))
-print(df.tail(2))
-print(df.info)
-print(df.shape)
-
-"""
